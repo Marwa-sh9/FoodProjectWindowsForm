@@ -1,0 +1,16 @@
+use Food;
+create table FoodInfo
+(
+MealID int not null primary key identity,
+MealName nvarchar(255) not null ,
+MealIngredients nvarchar(max),
+Method nvarchar(max),
+location nvarchar(255) not null,
+photo image ,
+);
+ALTER DATABASE [Food] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+ALTER DATABASE [Food] COLLATE ARABIC_CI_AS;
+GO
+ALTER DATABASE [Food] SET MULTI_USER;
+GO
